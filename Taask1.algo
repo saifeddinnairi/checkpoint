@@ -1,0 +1,29 @@
+ALGORITHM Dot product
+type 
+vecteur= enregistrements
+    x:float;
+    y:float;
+fin
+VAR
+    v1,v2:vecteur
+    n:integer
+
+BEGIN
+    
+    FUNCTION dot_product (v1 , v2) : float 
+    VAR
+        ps:float
+    BEGIN
+        ps=v1.x*v2.x+v1.y*v2.y
+        return(ps)
+    END
+    lire(n)
+    FOR i FROM 0 TO n STEP 1  DO
+        write("give me  v1 (") lire(v1.x) write(",") lire( v1.Y) write(")\n")
+        write("give me  v2 (") lire(v2.x) write(",") lire( v2.Y) write(")\n")
+        IF(dot_product=)0 THEN
+            writeln("two vectors v1 AND  v2 are orthogonal")
+        ELSE
+            writeln("two vectors v1 AND  v2 are not  orthogonal")
+    END_FOR
+END

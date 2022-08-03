@@ -1,0 +1,21 @@
+ALGORITHM SECOND_task
+
+VAR
+    n:integer
+    tab : ARRAY_OF integer[];
+BEGIN
+PROCEDURE trie_insertion(t  : ARRAY_OF integer[] )
+    VAR
+            j,current,i:integer
+    BEGIN
+        for i=1to t.length - 1 STEP 1 Do
+            current=t[i]   
+            j=i-1
+            while((j>=0 )AND(t[j]>current))
+                t[j]=t[j-1]
+                j--;
+            t[j+1]=current;
+    END
+    
+    
+END
